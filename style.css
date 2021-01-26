@@ -1,0 +1,14 @@
+@font-face {
+    font-family: "GrinchedRegular";
+    src: url("Assets/Fonts/GrinchedRegular.woff2") format("woff2")
+}
+
+* {
+    box-sizing: border-box; 
+}
+
+body {
+    margin: 0;
+    background: radial-gradient(#b81111, black );
+}
+
