@@ -22,7 +22,7 @@ html {
     font-weight: normal;
     font-family: GrinchedRegular, Arial;
     text-align: center;
-    font-size: 8em;
+    font-size: 10em;
 }
 
 .memory-card-info {
@@ -39,6 +39,7 @@ html {
     height: 175px;
     width: 125px;
     border-radius: 25px;
+    border-color: #32e300;
 
 }
 
@@ -64,4 +65,5 @@ justify-content: center;
 .card-photo {
     height: 8rem;
     width: 8rem;
+
 }
