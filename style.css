@@ -8,7 +8,39 @@
 }
 
 body {
+    background-color: #b81111;
     margin: 0;
-    background: radial-gradient(#b81111, black );
+
 }
 
+html {
+    min-height: 100vh;
+}
+
+.heading {
+    color: #32e300;
+    font-weight: normal;
+    font-family: GrinchedRegular, Arial;
+    text-align: center;
+    font-size: 8em;
+}
+
+.memory-card-info {
+    color: #32e300 ;
+    font-size: 2em;
+    font-family:GrinchedRegular, Arial;
+}
+
+.memory-card {
+    background-color: #03a9f4;
+    height: 175px;
+    width: 125px;
+    ;
+
+}
+
+.card-containter {
+
+display: grid; 
+grid-template-columns: repeat(4, auto);
+}
