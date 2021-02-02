@@ -3,6 +3,20 @@
     src: url("Assets/Fonts/GrinchedRegular.woff2") format("woff2")
 }
 
+.card-forward {
+    z-index: +1;;
+
+
+}
+
+
+
+
+
+
+
+
+
 * {
     box-sizing: border-box; 
 }
@@ -25,45 +39,81 @@ html {
     font-size: 10em;
 }
 
-.memory-card-info {
-    color: #32e300 ;
-    font-size: 4em;
-    font-family:GrinchedRegular, Arial;
-     grid-column: 1 / -1;
-     display: flex;
-     justify-content: space-between;
-}
-
 .memory-card {
     background-color: #03a9f4;
     height: 175px;
     width: 125px;
     border-radius: 25px;
     border-color: #32e300;
-
+    position: relative;
+    overflow: hidden;
+    backface-visibility: hidden;
 }
-
 .card-container {
 
 display: grid; 
 grid-template-columns: repeat(4, auto);
 grid-gap: 10px; 
-margin: 50px;
+margin: 50px auto;
 justify-content: center;
+
 }
 
-.card-front {
+.grinched-info {
+     color: #32e300;
+    font-weight: normal;
+    font-family: GrinchedRegular, Arial;
+    
+    font-size: 5em;
+    
+}
+
+.memory-card-info {
+    
+     
+     grid-column: 1 / -1;
+     display: flex;
+     justify-content: space-between;
+}
+
+.card-photo {
+    height: 8rem;
+    width: 8rem;
+    
+    
+}
+
+.card-feature {
     position: flex;
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center; 
+    backface-visibility: hidden;
     
 }
 
-.card-photo {
-    height: 8rem;
-    width: 8rem;
+.card-forward {
+    transform: rotateX(180deg);
+    
 
+}
+
+.card-reverse {
+    transform: rotateX(0);
+   
+}
+
+
+
+
+.memory-card.visible .card-reverse {
+transform: rotateY(-180deg);
+position: absolute;
+}
+
+.memory-card.visible .card-forward {
+transform: rotateY(0);
+position: absolute;
 }
