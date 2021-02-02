@@ -56,6 +56,7 @@ grid-template-columns: repeat(4, auto);
 grid-gap: 10px; 
 margin: 50px auto;
 justify-content: center;
+perspective: 500px;
 
 }
 
@@ -96,7 +97,7 @@ justify-content: center;
 
 .card-forward {
     transform: rotateX(180deg);
-    
+    transition: transform 400ms ease-in-out;
 
 }
 
@@ -108,12 +109,20 @@ justify-content: center;
 
 
 
-.memory-card.visible .card-reverse {
+.memory-card:hover .card-reverse {
 transform: rotateY(-180deg);
 position: absolute;
 }
 
-.memory-card.visible .card-forward {
+.memory-card:hover .card-forward {
 transform: rotateY(0);
 position: absolute;
+}
+
+.card-forward {
+    background-color: yellow;
+}
+
+.card-revrese {
+    background-color: #03a9f4;
 }
