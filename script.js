@@ -1,5 +1,7 @@
 const cards = document.querySelectorAll('.card-holding');
 
+/*-------Define Variables-----*/
+
 let cardAlreadyFlipped = false;
 let freezeBoard = false;
 let firstChosen, secondChosen;
@@ -8,6 +10,8 @@ let counter = document.querySelector(".moves");
 var reset = document.getElementById("reset");
 var flips = 0;
 var flipCount;
+
+/*-------Card Flip Function-----*/
 function flipCard() {
   if (freezeBoard) return;
   if (this === firstChosen) return;
@@ -31,6 +35,8 @@ function updateFlip()
   flips++;
   document.getElementById("flips").innerHTML = flips;
 }
+
+/*-------Card Match Check Function-----*/
 function checkForMatch() {
   let isMatch = firstChosen.dataset.card === secondChosen.dataset.card;
 
@@ -46,7 +52,7 @@ function disableCards() {
   secondChosen.removeEventListener('click', flipCard);
   resetBoard();
 }
-
+/*-------Game Scoreboard Function-----*/
 function increaseScore() {
   gameScore++;
   document.getElementById("game-score").innerHTML = gameScore;
@@ -67,7 +73,7 @@ function resetBoard() {
   [cardAlreadyFlipped, freezeBoard] = [false, false];
   [firstChosen, secondChosen] = [null, null];
 }
-
+/*-------Game Shuffle Function-----*/
 function shuffle() {
   console.log("shuffled")
   cards.forEach(card => {
@@ -75,6 +81,8 @@ function shuffle() {
     card.style.order = randomPos;
   });
 };
+
+/*-------Game Scoreboard Reset Function-----*/
 function resetGame() {
   if (freezeBoard) return;
   gameScore = 0;

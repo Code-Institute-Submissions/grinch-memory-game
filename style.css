@@ -1,3 +1,4 @@
+/* Grinch Custom Font  */
 @font-face {
     font-family: "GrinchedRegular";
     src: url("Assets/Fonts/GrinchedRegular.woff2") format("woff2")
@@ -71,6 +72,7 @@ justify-content: center;
   transform: rotateY(180deg);
 }
 
+
 html {
      cursor: url("Assets/Cursors/cursor.cur"), auto;
 }
@@ -110,7 +112,7 @@ html {
 
 
 
-
+/*-------Responsive Design section-----*/
 
 /* Moto G4 and Galaxy */
 @media screen and (max-width: 360px), 
