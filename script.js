@@ -13,93 +13,94 @@ var flipCount;
 
 /*-------Card Flip Function-----*/
 function flipCard() {
-  if (freezeBoard) return;
-  if (this === firstChosen) return;
+    if (freezeBoard) return;
+    if (this === firstChosen) return;
 
-  this.classList.add('flip');
-  if (!cardAlreadyFlipped) {
+    this.classList.add('flip');
+    if (!cardAlreadyFlipped) {
+        updateFlip()
+        cardAlreadyFlipped = true;
+        firstChosen = this;
+        return;
+    }
     updateFlip()
-    cardAlreadyFlipped = true;
-    firstChosen = this;
-    return;
-  }
-  updateFlip()
 
-  secondChosen = this;
+    secondChosen = this;
 
-  checkForMatch();
+    checkForMatch();
 }
 
-function updateFlip()
-{
-  flips++;
-  document.getElementById("flips").innerHTML = flips;
+function updateFlip() {
+    flips++;
+    document.getElementById("flips").innerHTML = flips;
 }
 
 /*-------Card Match Check Function-----*/
 function checkForMatch() {
-  let isMatch = firstChosen.dataset.card === secondChosen.dataset.card;
+    let isMatch = firstChosen.dataset.card === secondChosen.dataset.card;
 
-  if (isMatch) {
-    increaseScore()
-    disableCards()
-  }
-  else unflipCards()
+    if (isMatch) {
+        increaseScore()
+        disableCards()
+    } else unflipCards()
 }
 
 function disableCards() {
-  firstChosen.removeEventListener('click', flipCard);
-  secondChosen.removeEventListener('click', flipCard);
-  resetBoard();
+    firstChosen.removeEventListener('click', flipCard);
+    secondChosen.removeEventListener('click', flipCard);
+    resetBoard();
 }
 /*-------Game Scoreboard Function-----*/
 function increaseScore() {
-  gameScore++;
-  document.getElementById("game-score").innerHTML = gameScore;
+    gameScore++;
+    document.getElementById("game-score").innerHTML = gameScore;
 }
+
 function unflipCards() {
-  freezeBoard = true;
-  reset.disabled = true;
-  setTimeout(() => {
-    if (firstChosen) firstChosen.classList.remove('flip');
-    if (secondChosen) secondChosen.classList.remove('flip');
-    reset
-    reset.disabled = false;
-    resetBoard();
-  }, 1500);
+    freezeBoard = true;
+    reset.disabled = true;
+    setTimeout(() => {
+        if (firstChosen) firstChosen.classList.remove('flip');
+        if (secondChosen) secondChosen.classList.remove('flip');
+        reset
+        reset.disabled = false;
+        resetBoard();
+    }, 1500);
 }
 
 function resetBoard() {
-  [cardAlreadyFlipped, freezeBoard] = [false, false];
-  [firstChosen, secondChosen] = [null, null];
+    [cardAlreadyFlipped, freezeBoard] = [false, false];
+    [firstChosen, secondChosen] = [null, null];
 }
 /*-------Game Shuffle Function-----*/
 function shuffle() {
-  console.log("shuffled")
-  cards.forEach(card => {
-    let randomPos = Math.floor(Math.random() * 12);
-    card.style.order = randomPos;
-  });
+    console.log("shuffled")
+    cards.forEach(card => {
+        let randomPos = Math.floor(Math.random() * 12);
+        card.style.order = randomPos;
+    });
 };
 
 /*-------Game Scoreboard Reset Function-----*/
 function resetGame() {
-  if (freezeBoard) return;
-  gameScore = 0;
-  document.getElementById("game-score").innerHTML = gameScore;
-  cards.forEach(function (card) { card.classList.remove("flip") });
-  freezeBoard = true;
-  flips = 0;
-  document.getElementById("flips").innerHTML = flips;
-  setTimeout(function () {
-    freezeBoard = false;
-    shuffle();
-    resetBoard()
-  }, 1500)
+    if (freezeBoard) return;
+    gameScore = 0;
+    document.getElementById("game-score").innerHTML = gameScore;
+    cards.forEach(function(card) {
+        card.classList.remove("flip")
+    });
+    freezeBoard = true;
+    flips = 0;
+    document.getElementById("flips").innerHTML = flips;
+    setTimeout(function() {
+        freezeBoard = false;
+        shuffle();
+        resetBoard()
+    }, 1500)
 }
 
-reset.onclick = function () {
-  resetGame()
+reset.onclick = function() {
+    resetGame()
 }
 cards.forEach(card => card.addEventListener('click', flipCard));
 

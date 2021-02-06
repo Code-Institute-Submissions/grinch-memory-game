@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <title>Grinched Memory Game</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <link rel="stylesheet" href="style.css">
+   </head>
+   <!-- Game Counters  -->
+   <div class="card-container">
+      <div class ="memory-card-info">
+         <div class ="grinched-info1">
+            Score <span id="game-score" class="gameScore">0</span>
+         </div>
+         <div class ="grinched-info1">
+            Flips <span id="flips" class="flipsTimer" class="clickboard">0</span>
+         </div>
+      </div>
+      <!-- Game Card Containers  -->
+      <body>
+         <section class="game-container">
+            <div class="card-holding" data-card="tree">
+               <img class="card-forward" src="Assets/Images/tree.png" alt="tree"/>
+               <img class="card-reverse" src="Assets/Images/card-logo1.png" alt="card-logo"/>
+            </div>
+            <div class="card-holding" data-card="tree">
+               <img class="card-forward" src="Assets/Images/tree.png" alt="tree"/>
+               <img class="card-reverse" src="Assets/Images/card-logo1.png" alt="card-logo"/>
+            </div>
+            <div class="card-holding" data-card="elf">
+               <img class="card-forward" src="Assets/Images/elf.png" alt="elf"/>
+               <img class="card-reverse" src="Assets/Images/card-logo1.png" alt="card-logo"/>
+            </div>
+            <div class="card-holding" data-card="elf">
+               <img class="card-forward" src="Assets/Images/elf.png" alt="elf"/>
+               <img class="card-reverse" src="Assets/Images/card-logo1.png"alt="card-logo"/>
+            </div>
+            <div class="card-holding" data-card="pudding">
+               <img class="card-forward" src="Assets/Images/pudding.png" alt="pudding"/>
+               <img class="card-reverse" src="Assets/Images/card-logo1.png" alt="card-logo"/>
+            </div>
+            <div class="card-holding" data-card="pudding">
+               <img class="card-forward" src="Assets/Images/pudding.png" alt="pudding"/>
+               <img class="card-reverse" src="Assets/Images/card-logo1.png" alt="card-logo"/>
+            </div>
+            <div class="card-holding" data-card="stocking">
+               <img class="card-forward" src="Assets/Images/stocking.png" alt="stocking"/>
+               <img class="card-reverse" src="Assets/Images/card-logo1.png" alt="card-logo"/>
+            </div>
+            <div class="card-holding" data-card="stocking">
+               <img class="card-forward" src="Assets/Images/stocking.png" alt="stocking"/>
+               <img class="card-reverse" src="Assets/Images/card-logo1.png" alt="card-logo"/>
+            </div>
+            <div class="card-holding" data-card="snowman">
+               <img class="card-forward" src="Assets/Images/snowman.png" alt="snowman"/>
+               <img class="card-reverse" src="Assets/Images/card-logo1.png" alt="card-logo"/>
+            </div>
+            <div class="card-holding" data-card="snowman">
+               <img class="card-forward" src="Assets/Images/snowman.png" alt="snowman"/>
+               <img class="card-reverse" src="Assets/Images/card-logo1.png" alt="card-logo"/>
+            </div>
+            <div class="card-holding" data-card="deer">
+               <img class="card-forward" src="Assets/Images/deer.png" alt="deer"/>
+               <img class="card-reverse" src="Assets/Images/card-logo1.png" alt="card-logo"/>
+            </div>
+            <div class="card-holding" data-card="deer">
+               <img class="card-forward" src="Assets/Images/deer.png" alt="deer"/>
+               <img class="card-reverse" src="Assets/Images/card-logo1.png" alt="card-logo"/>
+            </div>
+         </section>
+         <div class="row">
+            <div class="col-sm grinched-info1">
+               <a href="index.html" class="btn btn-success2 buttonStyle playbutton btn-lg " role="button" style="position: absolute; font-size: 2rem; margin-bottom: 5%; " >Home</a> 
+            </div>
+            <div class="col-sm">
+            </div>
+            <div class="col-sm grinched-info1">
+               <button id="reset" data-toggle="modal" data-target="#exampleModalCenter" class="btn btn-success2 buttonStyle btn-lg helpbutton " role="button" style="position: absolute; font-size: 2rem; margin-bottom: 5%;">Reset</button>
+            </div>
+         </div>
+   </div>
+   <script src="script.js"></script>
+   <!-- JavaScript -->
+   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   </body>
+</html>

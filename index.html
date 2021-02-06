@@ -1,106 +1,78 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style> 
+    body {background-color:#b81111;}
+    </style>
+    
+  </head>
+  <body>
+  <!-- Homepage Game Heading -->
+  <div class="container">
+  <div class="row">
+    <div>
+     <h1 class="heading heading-home text-right">Grinched!</h1>
+    </div>
+  </div>
 
-  <title>Grinched Memory Game</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
-</head>
 
-<!-- Game Counters  -->
-<div class="card-container">
-   <div class ="memory-card-info">
-      <div class ="grinched-info1">
+  <!-- Homepage Grinch Main Image -->
+  <div class="row">
+    <div>
+      <img class="homepage-image" src="Assets/Images/newhomepage1.png"/>
+    </div>
+  </div>
 
-        Score <span id="game-score" class="gameScore">0</span>
-      </div>
-      <div class ="grinched-info1">
 
-       Flips <span id="flips" class="flipsTimer" class="clickboard">0</span>
-      </div>
-   </div>
-<!-- Game Card Containers  -->
-<body>
-  <section class="game-container">
-    <div class="card-holding" data-card="tree">
-      <img class="card-forward" src="Assets/Images/tree.png"/>
-      <img class="card-reverse" src="Assets/Images/card-logo1.png"/>
-    </div>
-    <div class="card-holding" data-card="tree">
-      <img class="card-forward" src="Assets/Images/tree.png"/>
-      <img class="card-reverse" src="Assets/Images/card-logo1.png"/>
-    </div>
-
-    <div class="card-holding" data-card="elf">
-      <img class="card-forward" src="Assets/Images/elf.png"/>
-      <img class="card-reverse" src="Assets/Images/card-logo1.png"/>
-    </div>
-    <div class="card-holding" data-card="elf">
-      <img class="card-forward" src="Assets/Images/elf.png"/>
-      <img class="card-reverse" src="Assets/Images/card-logo1.png"/>
-    </div>
-
-    <div class="card-holding" data-card="pudding">
-      <img class="card-forward" src="Assets/Images/pudding.png"/>
-      <img class="card-reverse" src="Assets/Images/card-logo1.png"/>
-    </div>
-    <div class="card-holding" data-card="pudding">
-      <img class="card-forward" src="Assets/Images/pudding.png"/>
-      <img class="card-reverse" src="Assets/Images/card-logo1.png"/>
-    </div>
-
-    <div class="card-holding" data-card="stocking">
-      <img class="card-forward" src="Assets/Images/stocking.png"/>
-      <img class="card-reverse" src="Assets/Images/card-logo1.png"/>
-    </div>
-    <div class="card-holding" data-card="stocking">
-      <img class="card-forward" src="Assets/Images/stocking.png"/>
-      <img class="card-reverse" src="Assets/Images/card-logo1.png"/>
-    </div>
-
-    <div class="card-holding" data-card="snowman">
-      <img class="card-forward" src="Assets/Images/snowman.png"/>
-      <img class="card-reverse" src="Assets/Images/card-logo1.png"/>
-    </div>
-    <div class="card-holding" data-card="snowman">
-      <img class="card-forward" src="Assets/Images/snowman.png"/>
-      <img class="card-reverse" src="Assets/Images/card-logo1.png"/>
-    </div>
-
-    <div class="card-holding" data-card="deer">
-      <img class="card-forward" src="Assets/Images/deer.png"/>
-      <img class="card-reverse" src="Assets/Images/card-logo1.png"/>
-    </div>
-    <div class="card-holding" data-card="deer">
-      <img class="card-forward" src="Assets/Images/deer.png"/>
-      <img class="card-reverse" src="Assets/Images/card-logo1.png"/>
-    </div>
-  </section>
-
-   <div class="row">
+  <!-- Play Button on Home Page -->
+  <div class="row">
     <div class="col-sm grinched-info1">
-     <a href="home.html" class="btn btn-success2 buttonStyle playbutton btn-lg " role="button" style="position: absolute; font-size: 2rem; margin-bottom: 5%; " >Home</a> 
+     <a href="game.html" class="btn btn-success2 buttonStyle playbutton btn-lg " role="button" style="position: absolute; font-size: 2rem; margin-bottom: 5%; " >Play</a> 
     </div>
     <div class="col-sm">
-      
+   <!-- Insrtuctions Button on Home Page -->   
     </div>
     <div class="col-sm grinched-info1">
-     <button id="reset" data-toggle="modal" data-target="#exampleModalCenter" class="btn btn-success2 buttonStyle btn-lg helpbutton " role="button" style="position: absolute; font-size: 2rem; margin-bottom: 5%;">Reset</button>
+     <button data-toggle="modal" data-target="#exampleModalCenter" class="btn btn-success2 buttonStyle btn-lg helpbutton " role="button" style="position: absolute; font-size: 2rem; margin-bottom: 5%;">Instructions</button>
+    </div>
+  </div>
+</div>
+
+
+ <!-- Modal Taken from Bootstrap 4  -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title grinched-info2" id="exampleModalLongTitle">Welcome to the Grinched Memory Card Game </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body grinched-info2">
+        The objective of the Game is to is to match each of the six pairs of cards in the least amount of time and flips. Goodluck!
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn-lg btn-success grinched-info2" data-dismiss="modal" style="color:black">Close</button>
+        
+      </div>
     </div>
   </div>
 </div>
 
 
 
-
-
-
-
-  <script src="script.js"></script>
-  <!-- Optional JavaScript -->
+    
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-</body>
+  </body>
 </html>

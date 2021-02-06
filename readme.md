@@ -1,4 +1,4 @@
-
+<img src="https://i.imgur.com/AscrELt.png">
 
  ## Interactive Front End Development Project:  Grinch Memory Card Game
  -This project is a memory game written in JavaScript, CSS and HTML. The game tests memory skills with the user aiming to match as many cards in as few attempts as possible.
@@ -23,7 +23,8 @@
  
  **Wireframes**
  I used the Mockflow Pro tool in order to map out the layout of the game and to create a focal point and goal to reference as the project progressed. 
- 
+ <img src="https://i.imgur.com/iCr5riE.png">
+ <img src="https://i.imgur.com/VXtA1KR.png">
 
  
 
@@ -38,7 +39,7 @@
 
  - Create a Time and Flips counter seperately above the cards to allow users to keep track of their progress in the game. 
 
- - Provide user with custom Grinch cursor on desktop version of the game.
+ - Provide user with custom Grinch cursor on the desktop version of the game.
 
  
 
@@ -53,7 +54,7 @@
     - The project uses **Bootstrap 4.5.0** to streamiline the sites responsivness aswell as for embedded features 
     such as the navbar, table etc. 
 - [Google Fonts](https://fonts.google.com)
-- The project uses **Google Fonts** for text styling. 
+    - The project uses **Google Fonts** for text styling. 
 - [Font-Awesome](https://fontawesome.com)
     - The project uses **Font-Awesome 4.7.0** for logos and text styling. 
 - [MDBootstrap](https://getbootstrap.com)
@@ -97,7 +98,8 @@
   Windows PC
   -Chrome Browser
   -Edge Browser
-    
+
+  <img src="https://i.imgur.com/XZZHc4P.png">
 
  #### Validator 
 
@@ -119,7 +121,10 @@ a master branch from one author.
  ### References
 
  - [StackOverflow](https://es.stackoverflow.com/)
- - 
+ - [FreeCodeCamp] (www.freecodecamp.org)
+ - [Scotch.io]   (www.scotch.io/how-to-build-a-memory-match-game)
+
+
 
 
  ### Media
@@ -128,6 +133,7 @@ a master branch from one author.
  -[CleanPNG] (www.cleanpng.com)
  -[PNGTree] (www.pngtree.com)
  -[CustomCursor] (www.custom-cursor.com)
+ -[Dev.to] (https://dev.to/fakorededamilola/create-a-memory-game-with-js-1l9j)
 
 
 

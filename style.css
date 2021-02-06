@@ -1,411 +1,323 @@
 /* Grinch Custom Font  */
+
 @font-face {
-    font-family: "GrinchedRegular";
-    src: url("Assets/Fonts/GrinchedRegular.woff2") format("woff2")
-}
-.heading {
-    color: #32e300;
-    font-weight: normal;
-    font-family: GrinchedRegular, Arial;
-    text-align: center;
-    font-size: 10em;
+	font-family: "GrinchedRegular";
+	src: url("Assets/Fonts/GrinchedRegular.woff2") format("woff2")
 }
 
+.heading {
+	color: #32e300;
+	font-weight: normal;
+	font-family: GrinchedRegular, Arial;
+	text-align: center;
+	font-size: 10em;
+}
 
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
 }
 
 body {
-  height: 100vh;
-  display: flex;
-  background: #b81111;
-  justify-content: center;
+	height: 100vh;
+	display: flex;
+	background: #b81111;
+	justify-content: center;
 }
 
 .game-container {
-display:flex;
-flex-wrap: wrap;
-max-width:750px;
-margin: auto;
-justify-content: center;
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 750px;
+	margin: auto;
+	justify-content: center;
 }
 
 .card-holding {
-  width: 150px;
-  height: 200px;
-  margin: 5px;
-  position: relative;
-  transform: scale(1);
-  transform-style: preserve-3d;
-  transition: transform .5s;
-  border-color: #32e300;
-  border-radius: 25px;
-  border-style: solid;
-  
+	width: 150px;
+	height: 200px;
+	margin: 5px;
+	position: relative;
+	transform: scale(1);
+	transform-style: preserve-3d;
+	transition: transform .5s;
+	border-color: #32e300;
+	border-radius: 25px;
+	border-style: solid;
 }
 
-
 .card-holding:active {
-  transform: scale(0.97);
-  transition: transform .2s;
+	transform: scale(0.97);
+	transition: transform .2s;
 }
 
 .card-holding.flip {
-  transform: rotateY(180deg);
+	transform: rotateY(180deg);
 }
 
 .card-forward,
 .card-reverse {
-  width: 100%;
-  height: 100%;
-  padding: 20px;
-  position: absolute;
-  border-radius: 20px;
-  background: #32e300;
-  backface-visibility: hidden;
+	width: 100%;
+	height: 100%;
+	padding: 20px;
+	position: absolute;
+	border-radius: 20px;
+	background: #32e300;
+	backface-visibility: hidden;
 }
 
 .card-forward {
-  transform: rotateY(180deg);
+	transform: rotateY(180deg);
 }
 
-
 html {
-     cursor: url("Assets/Cursors/cursor.cur"), auto;
+	cursor: url("Assets/Cursors/cursor.cur"), auto;
 }
 
 .memory-card-info {
-    
-     
-     grid-column: 1 / -1;
-     display: flex;
-     justify-content: space-between;
+	grid-column: 1 / -1;
+	display: flex;
+	justify-content: space-between;
 }
 
 .grinched-info1 {
-     color: #32e300;
-    font-weight: normal;
-    font-family: GrinchedRegular, Arial;
-    
-    font-size: 5em;
-    
+	color: #32e300;
+	font-weight: normal;
+	font-family: GrinchedRegular, Arial;
+	font-size: 5em;
 }
+
 
 /*-------Button and Modal section-----*/
 
-.btn-success2{
-    color:black;
-    background-color: #32e300;
-    border-color:  #32e300;
-    top: 10vh
+.btn-success2 {
+	color: black;
+	background-color: #32e300;
+	border-color: #32e300;
+	top: 10vh
 }
 
 .buttonStyle {
-    height: 5rem;
-    width: 10rem
-     
+	height: 5rem;
+	width: 10rem
 }
-
-
 
 
 /*-------Responsive Design section-----*/
 
+
 /* Moto G4 and Galaxy */
-@media screen and (max-width: 360px), 
-       screen and (max-height: 640px) {
 
-          
-  
+@media screen and (max-width: 360px),
+screen and (max-height: 640px) {}
 
+.heading-home {
+	font-size: 6rem;
+	margin-left: 5%;
 }
 
- .heading-home {
-    font-size: 6rem;
-    margin-left: 5%;
- }
-
- .homepage-image {
-     height:50vh ;
-     width: 50vh;
-     margin-left: 10%;
- }
-  .playbutton {
-      height: 4rem;
-      width: 8rem;
-      margin-left: 50%; 
-    
-  }
-
-  .helpbutton {
-      height: 4rem;
-      width: 10rem;
-      
+.homepage-image {
+	height: 50vh;
+	width: 50vh;
+	margin-left: 10%;
 }
-       
-  /* Pixel 2 */
-@media screen and (max-width: 411px), 
-       screen and (max-height: 731px) {
 
- 
-
-
- .heading-home {
-    font-size: 6rem;
-    margin-left: 10%;
- }
-
- .homepage-image {
-     height:50vh ;
-     width: 50vh;
-     margin-left: 10%;
- }
-  .playbutton {
-      height: 4rem;
-      width: 8rem;
-      margin-left: 55%; 
-    
-  }
-
-  .helpbutton {
-      height: 4rem;
-      width: 10rem;
-      
+.playbutton {
+	height: 4rem;
+	width: 8rem;
+	margin-left: 50%;
 }
-       }
 
-
-  /* Pixel 2 XL */
-@media screen and (max-width: 411px), 
-       screen and (max-height: 823px) {
-
- 
-
-
- .heading-home {
-    font-size: 6rem;
-    margin-left: 10%;
- }
-
- .homepage-image {
-     height:50vh ;
-     width: 45vh;
-     
- }
-  .playbutton {
-      height: 4rem;
-      width: 8rem;
-      margin-left: 55%; 
-    
-  }
-
-  .helpbutton {
-      height: 4rem;
-      width: 10rem;
-      
+.helpbutton {
+	height: 4rem;
+	width: 10rem;
 }
-       }
-
-       /* Iphone 5 SE */
-@media screen and (max-width: 320px), 
-       screen and (max-height: 568px) {
-
- 
 
 
- .heading-home {
-    font-size: 5rem;
-    margin-left: 5%;
- }
+/* Pixel 2 */
 
- .homepage-image {
-     height:50vh ;
-     width: 45vh;
-     
- }
-  .playbutton {
-      height: 4rem;
-      width: 7rem;
-      margin-left: 55%; 
-    
-  }
-
-  .helpbutton {
-      height: 4rem;
-      width: 10rem;
-      
+@media screen and (max-width: 411px),
+screen and (max-height: 731px) {
+	.heading-home {
+		font-size: 6rem;
+		margin-left: 10%;
+	}
+	.homepage-image {
+		height: 50vh;
+		width: 50vh;
+		margin-left: 10%;
+	}
+	.playbutton {
+		height: 4rem;
+		width: 8rem;
+		margin-left: 55%;
+	}
+	.helpbutton {
+		height: 4rem;
+		width: 10rem;
+	}
 }
-       }
-
-  /* Iphone 6/7/8 */
-@media screen and (max-width: 375px), 
-       screen and (max-height: 667px) {
-
- 
 
 
- .heading-home {
-    font-size: 6rem;
-    margin-left: 5%;
- }
+/* Pixel 2 XL */
 
- .homepage-image {
-     height:50vh ;
-     width: 45vh;
-     
- }
-  .playbutton {
-      height: 4rem;
-      width: 7rem;
-      margin-left: 55%; 
-    
-  }
-
-  .helpbutton {
-      height: 4rem;
-      width: 10rem;
-      
+@media screen and (max-width: 411px),
+screen and (max-height: 823px) {
+	.heading-home {
+		font-size: 6rem;
+		margin-left: 10%;
+	}
+	.homepage-image {
+		height: 50vh;
+		width: 45vh;
+	}
+	.playbutton {
+		height: 4rem;
+		width: 8rem;
+		margin-left: 55%;
+	}
+	.helpbutton {
+		height: 4rem;
+		width: 10rem;
+	}
 }
-       }
-
- 
 
 
+/* Iphone 5 SE */
+
+@media screen and (max-width: 320px),
+screen and (max-height: 568px) {
+	.heading-home {
+		font-size: 5rem;
+		margin-left: 5%;
+	}
+	.homepage-image {
+		height: 50vh;
+		width: 45vh;
+	}
+	.playbutton {
+		height: 4rem;
+		width: 7rem;
+		margin-left: 55%;
+	}
+	.helpbutton {
+		height: 4rem;
+		width: 10rem;
+	}
+}
 
 
+/* Iphone 6/7/8 */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@media screen and (max-width: 375px),
+screen and (max-height: 667px) {
+	.heading-home {
+		font-size: 6rem;
+		margin-left: 5%;
+	}
+	.homepage-image {
+		height: 50vh;
+		width: 45vh;
+	}
+	.playbutton {
+		height: 4rem;
+		width: 7rem;
+		margin-left: 55%;
+	}
+	.helpbutton {
+		height: 4rem;
+		width: 10rem;
+	}
+}
 
 
 /* Medium devices (landscape tablets, 768px and up) */
+
 @media only screen and (min-width: 768px) {
-
-.heading-home {
-    font-size: 10rem;
-    margin-left: 10%;
- }
-
- .homepage-image {
-     height:50vh ;
-     width: 45vh;
-     margin-left: 10vh;
-     
- }
-  .playbutton {
-      height: 6rem;
-      width: 12rem;
-      margin-left: 55%;
-    
-    
-  }
-
-  .helpbutton {
-      height: 6rem;
-      width: 12rem;
-      
-      
+	.heading-home {
+		font-size: 10rem;
+		margin-left: 10%;
+	}
+	.homepage-image {
+		height: 50vh;
+		width: 45vh;
+		margin-left: 10vh;
+	}
+	.playbutton {
+		height: 6rem;
+		width: 12rem;
+		margin-left: 55%;
+	}
+	.helpbutton {
+		height: 6rem;
+		width: 12rem;
+	}
+	.grinched-info {
+		font-size: 12rem;
+	}
 }
 
-.grinched-info{
-    font-size: 12rem;
-}
-
-
-
-
-
-
-
-
-
-
-}
 
 /* Large devices (laptops/desktops, 992px and up) */
+
 @media only screen and (min-width: 992px) {
-.heading-home {
-    font-size: 11rem;
-    margin-left: 30%;
- }
-
- .homepage-image {
-     height:60vh ;
-     width: 45vh;
-     margin-left: 20vh;
-     
- }
- .playbutton {
-      height: 4rem;
-      width: 12rem;
-      margin-left: 55%;
-    
-    
-  }
-
-  .helpbutton {
-      height: 4rem;
-      width: 12rem;
-      
-      
+	.heading-home {
+		font-size: 11rem;
+		margin-left: 30%;
+	}
+	.homepage-image {
+		height: 60vh;
+		width: 45vh;
+		margin-left: 20vh;
+	}
+	.playbutton {
+		height: 4rem;
+		width: 12rem;
+		margin-left: 55%;
+	}
+	.helpbutton {
+		height: 4rem;
+		width: 12rem;
+	}
 }
 
-
-}
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
+
 @media only screen and (min-width: 1200px) {
-   .homepage-image {
-     height:50vh ;
-     width: 35vh;
-     margin-left: 120%;
- }
- .heading-home {
-    font-size: 11rem;
-    margin-left: 40%;
- }
-
-
-
-
-.grinched-info2 {
-  color: black;
-    font-weight: normal;
-    font-family: GrinchedRegular, Arial;
-    font-size: 2rem;
-
+	.homepage-image {
+		height: 50vh;
+		width: 35vh;
+		margin-left: 120%;
+	}
+	.heading-home {
+		font-size: 11rem;
+		margin-left: 40%;
+	}
+	.grinched-info2 {
+		color: black;
+		font-weight: normal;
+		font-family: GrinchedRegular, Arial;
+		font-size: 2rem;
+	}
 }
-}
-
 
 .modal-body {
-    background: #32e300;
+	background: #32e300;
 }
+
 .modal-footer {
-    background:#32e300;
+	background: #32e300;
 }
+
 .modal-header {
-    background:#32e300;
+	background: #32e300;
 }
-@media (max-width:980px){
-    .card-holding{
-        height: 290px;
-        width: 220px;
-    }
+
+@media (max-width:980px) {
+	.card-holding {
+		height: 290px;
+		width: 220px;
+	}
 }
