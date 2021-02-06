@@ -1,177 +1,106 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Page Title</title>
-<link href ="style.css" rel="stylesheet">
-</head>
-<body>
+  <meta charset="UTF-8">
 
-<h1 class ="heading">Grinched!</h1>
+  <title>Grinched Memory Game</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+
 
 <div class="card-container">
    <div class ="memory-card-info">
-      <div class ="grinched-info">
+      <div class ="grinched-info1">
 
-        Time <span id="Game-Timer">80</span>
+        Score <span id="game-score" class="gameScore">0</span>
       </div>
-      <div class ="grinched-info">
+      <div class ="grinched-info1">
 
-       Flips <span id="Flips-Timer">0</span>
-      </div>
-   </div>
-  
-   <div class="memory-card  ">
-        <div class="card-reverse card-feature">
-          <img class="card-photo" src="Assets/images/card-logo.png">
-        </div>
-      <div class="card-forward card-feature">
-          <img class="card-photo" src="Assets/images/tree.png">
+       Flips <span id="flips" class="flipsTimer" class="clickboard">0</span>
       </div>
    </div>
 
-   <div class="memory-card visible"><div class="card-reverse card-feature">
-          <img class="card-photo" src="Assets/images/card-logo.png">
-        </div>
-        <div class="card-forward card-feature">
-          <img class="card-photo" src="Assets/images/elf.png">
-      </div>
+<body>
+  <section class="game-container">
+    <div class="card-holding" data-card="tree">
+      <img class="card-forward" src="Assets/Images/tree.png"/>
+      <img class="card-reverse" src="Assets/Images/card-logo1.png"/>
+    </div>
+    <div class="card-holding" data-card="tree">
+      <img class="card-forward" src="Assets/Images/tree.png"/>
+      <img class="card-reverse" src="Assets/Images/card-logo1.png"/>
     </div>
 
-     <div class="memory-card visible"><div class="card-reverse card-feature">
-          <img class="card-photo" src="Assets/images/card-logo.png">
-        </div>
-        <div class="card-forward card-feature">
-          <img class="card-photo" src="Assets/images/bobble.png">
-      </div>
+    <div class="card-holding" data-card="elf">
+      <img class="card-forward" src="Assets/Images/elf.png"/>
+      <img class="card-reverse" src="Assets/Images/card-logo1.png"/>
+    </div>
+    <div class="card-holding" data-card="elf">
+      <img class="card-forward" src="Assets/Images/elf.png"/>
+      <img class="card-reverse" src="Assets/Images/card-logo1.png"/>
     </div>
 
-     <div class="memory-card visible"><div class="card-reverse card-feature">
-          <img class="card-photo" src="Assets/images/card-logo.png">
-        </div>
-        <div class="card-forward card-feature">
-          <img class="card-photo" src="Assets/images/pudding.png">
-      </div>
+    <div class="card-holding" data-card="pudding">
+      <img class="card-forward" src="Assets/Images/pudding.png"/>
+      <img class="card-reverse" src="Assets/Images/card-logo1.png"/>
     </div>
-     <div class="memory-card visible ">
-        <div class="card-reverse card-feature">
-          <img class="card-photo" src="Assets/images/card-logo.png">
-        </div>
-      <div class="card-forward card-feature">
-          <img class="card-photo" src="Assets/images/deer.png">
-      </div>
-   </div>
-
-   <div class="memory-card visible"><div class="card-reverse card-feature">
-          <img class="card-photo" src="Assets/images/card-logo.png">
-        </div>
-        <div class="card-forward card-feature">
-          <img class="card-photo" src="Assets/images/candycane.png">
-      </div>
+    <div class="card-holding" data-card="pudding">
+      <img class="card-forward" src="Assets/Images/pudding.png"/>
+      <img class="card-reverse" src="Assets/Images/card-logo1.png"/>
     </div>
 
-     <div class="memory-card visible"><div class="card-reverse card-feature">
-          <img class="card-photo" src="Assets/images/card-logo.png">
-        </div>
-        <div class="card-forward card-feature">
-          <img class="card-photo" src="Assets/images/tree.png">
-      </div>
+    <div class="card-holding" data-card="stocking">
+      <img class="card-forward" src="Assets/Images/stocking.png"/>
+      <img class="card-reverse" src="Assets/Images/card-logo1.png"/>
+    </div>
+    <div class="card-holding" data-card="stocking">
+      <img class="card-forward" src="Assets/Images/stocking.png"/>
+      <img class="card-reverse" src="Assets/Images/card-logo1.png"/>
     </div>
 
-     <div class="memory-card visible"><div class="card-reverse card-feature">
-          <img class="card-photo" src="Assets/images/card-logo.png">
-        </div>
-        <div class="card-forward card-feature">
-          <img class="card-photo" src="Assets/images/candycane.png">
-      </div>
+    <div class="card-holding" data-card="snowman">
+      <img class="card-forward" src="Assets/Images/snowman.png"/>
+      <img class="card-reverse" src="Assets/Images/card-logo1.png"/>
     </div>
-     <div class="memory-card visible ">
-        <div class="card-reverse card-feature">
-          <img class="card-photo" src="Assets/images/card-logo.png">
-        </div>
-      <div class="card-forward card-feature">
-          <img class="card-photo" src="Assets/images/deer.png">
-      </div>
-   </div>
-
-   <div class="memory-card visible"><div class="card-reverse card-feature">
-          <img class="card-photo" src="Assets/images/card-logo.png">
-        </div>
-        <div class="card-forward card-feature">
-          <img class="card-photo" src="Assets/images/bobble.png">
-      </div>
+    <div class="card-holding" data-card="snowman">
+      <img class="card-forward" src="Assets/Images/snowman.png"/>
+      <img class="card-reverse" src="Assets/Images/card-logo1.png"/>
     </div>
 
-     <div class="memory-card visible"><div class="card-reverse card-feature">
-          <img class="card-photo" src="Assets/images/card-logo.png">
-        </div>
-        <div class="card-forward card-feature">
-          <img class="card-photo" src="Assets/images/elf.png">
-      </div>
+    <div class="card-holding" data-card="deer">
+      <img class="card-forward" src="Assets/Images/deer.png"/>
+      <img class="card-reverse" src="Assets/Images/card-logo1.png"/>
     </div>
-
-     <div class="memory-card visible"><div class="card-reverse card-feature">
-          <img class="card-photo" src="Assets/images/card-logo.png">
-        </div>
-        <div class="card-forward card-feature">
-          <img class="card-photo" src="Assets/images/pudding.png">
-      </div>
+    <div class="card-holding" data-card="deer">
+      <img class="card-forward" src="Assets/Images/deer.png"/>
+      <img class="card-reverse" src="Assets/Images/card-logo1.png"/>
     </div>
-     <div class="memory-card visible ">
-        <div class="card-reverse card-feature">
-          <img class="card-photo" src="Assets/images/card-logo.png">
-        </div>
-      <div class="card-forward card-feature">
-          <img class="card-photo" src="Assets/images/snowman.png">
-      </div>
-   </div>
+  </section>
 
-   <div class="memory-card visible"><div class="card-reverse card-feature">
-          <img class="card-photo" src="Assets/images/card-logo.png">
-        </div>
-        <div class="card-forward card-feature">
-          <img class="card-photo" src="Assets/images/stocking.png">
-      </div>
+   <div class="row">
+    <div class="col-sm grinched-info1">
+     <a href="home.html" class="btn btn-success2 buttonStyle playbutton btn-lg " role="button" style="position: absolute; font-size: 2rem; margin-bottom: 5%; " >Home</a> 
     </div>
-
-     <div class="memory-card visible"><div class="card-reverse card-feature">
-          <img class="card-photo" src="Assets/images/card-logo.png">
-        </div>
-        <div class="card-forward card-feature">
-          <img class="card-photo" src="Assets/images/snowman.png">
-      </div>
+    <div class="col-sm">
+      
     </div>
-
-     <div class="memory-card visible"><div class="card-reverse card-feature">
-          <img class="card-photo" src="Assets/images/card-logo.png">
-        </div>
-        <div class="card-forward card-feature">
-          <img class="card-photo" src="Assets/images/stocking.png">
-      </div>
+    <div class="col-sm grinched-info1">
+     <button id="reset" data-toggle="modal" data-target="#exampleModalCenter" class="btn btn-success2 buttonStyle btn-lg helpbutton " role="button" style="position: absolute; font-size: 2rem; margin-bottom: 5%;">Reset</button>
     </div>
-  
-  
-    
-
-   
-   
-
-
-
-
-
-  
-
+  </div>
 </div>
 
-  
-   
 
 
 
 
 
 
-
-
+  <script src="script.js"></script>
+  <!-- Optional JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
