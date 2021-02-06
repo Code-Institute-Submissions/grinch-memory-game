@@ -105,3 +105,6 @@ reset.onclick = function() {
 cards.forEach(card => card.addEventListener('click', flipCard));
 
 shuffle();
+
+
+/*-------Based on free-code-camp Vanilla JS Memory Game -----*/
