@@ -1,7 +1,7 @@
 <img src="https://i.imgur.com/AscrELt.png">
 
  ## Interactive Front End Development Project:  Grinch Memory Card Game
- -This project is a memory game written in JavaScript, CSS and HTML. The game tests memory skills with the user aiming to match as many cards in as few attempts as possible.
+ This project is a memory game written in JavaScript, CSS and HTML. The game tests memory skills with the user aiming to match as many cards in as few attempts as possible.
  
 
 
